@@ -7,3 +7,4 @@ application = get_wsgi_application()
 
 # ADD THIS LINE AT THE BOTTOM
 app = application
+app = application
