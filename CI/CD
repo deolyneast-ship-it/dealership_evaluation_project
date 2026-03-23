@@ -1,1 +1,197 @@
+Current runner version: '2.332.0'
+Runner Image Provisioner
+Operating System
+Runner Image
+GITHUB_TOKEN Permissions
+Secret source: Actions
+Prepare workflow directory
+Prepare all required actions
+Getting action download info
+Download action repository 'actions/checkout@v3' (SHA:f43a0e5ff2bd294095638e18286ca9a3d1956744)
+Download action repository 'actions/setup-python@v3' (SHA:3542bca2639a428e1796aaa6a2ffef0c0f575566)
+Download action repository 'actions/setup-node@v3' (SHA:3235b876344d2a9aa001b8d1453c930bba69e610)
+Complete job name: build
+0s
+0s
+Run actions/setup-python@v3
+Successfully setup CPython (3.10.20)
+8s
+Run python -m pip install --upgrade pip
+Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.10.20/x64/lib/python3.10/site-packages (26.0.1)
+Collecting django (from -r requirements.txt (line 1))
+  Downloading django-5.2.12-py3-none-any.whl.metadata (4.1 kB)
+Collecting gunicorn (from -r requirements.txt (line 2))
+  Downloading gunicorn-25.1.0-py3-none-any.whl.metadata (5.5 kB)
+Collecting whitenoise (from -r requirements.txt (line 3))
+  Downloading whitenoise-6.12.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting dj-database-url (from -r requirements.txt (line 4))
+  Downloading dj_database_url-3.1.2-py3-none-any.whl.metadata (13 kB)
+Collecting psycopg2-binary (from -r requirements.txt (line 5))
+  Downloading psycopg2_binary-2.9.11-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (4.9 kB)
+Collecting flask (from -r requirements.txt (line 6))
+  Downloading flask-3.1.3-py3-none-any.whl.metadata (3.2 kB)
+Collecting flask-cors (from -r requirements.txt (line 7))
+  Downloading flask_cors-6.0.2-py3-none-any.whl.metadata (5.3 kB)
+Collecting requests (from -r requirements.txt (line 8))
+  Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+Collecting asgiref>=3.8.1 (from django->-r requirements.txt (line 1))
+  Downloading asgiref-3.11.1-py3-none-any.whl.metadata (9.3 kB)
+Collecting sqlparse>=0.3.1 (from django->-r requirements.txt (line 1))
+  Downloading sqlparse-0.5.5-py3-none-any.whl.metadata (4.7 kB)
+Collecting packaging (from gunicorn->-r requirements.txt (line 2))
+  Downloading packaging-26.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting blinker>=1.9.0 (from flask->-r requirements.txt (line 6))
+  Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+Collecting click>=8.1.3 (from flask->-r requirements.txt (line 6))
+  Downloading click-8.3.1-py3-none-any.whl.metadata (2.6 kB)
+Collecting itsdangerous>=2.2.0 (from flask->-r requirements.txt (line 6))
+  Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+Collecting jinja2>=3.1.2 (from flask->-r requirements.txt (line 6))
+  Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting markupsafe>=2.1.1 (from flask->-r requirements.txt (line 6))
+  Downloading markupsafe-3.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Collecting werkzeug>=3.1.0 (from flask->-r requirements.txt (line 6))
+  Downloading werkzeug-3.1.6-py3-none-any.whl.metadata (4.0 kB)
+Collecting charset_normalizer<4,>=2 (from requests->-r requirements.txt (line 8))
+  Downloading charset_normalizer-3.4.6-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+Collecting idna<4,>=2.5 (from requests->-r requirements.txt (line 8))
+  Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+Collecting urllib3<3,>=1.21.1 (from requests->-r requirements.txt (line 8))
+  Downloading urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
+Collecting certifi>=2017.4.17 (from requests->-r requirements.txt (line 8))
+  Downloading certifi-2026.2.25-py3-none-any.whl.metadata (2.5 kB)
+Collecting typing_extensions>=4 (from asgiref>=3.8.1->django->-r requirements.txt (line 1))
+  Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+Downloading django-5.2.12-py3-none-any.whl (8.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 225.4 MB/s  0:00:00
+Downloading gunicorn-25.1.0-py3-none-any.whl (197 kB)
+Downloading whitenoise-6.12.0-py3-none-any.whl (20 kB)
+Downloading dj_database_url-3.1.2-py3-none-any.whl (9.0 kB)
+Downloading psycopg2_binary-2.9.11-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.2/4.2 MB 236.7 MB/s  0:00:00
+Downloading flask-3.1.3-py3-none-any.whl (103 kB)
+Downloading flask_cors-6.0.2-py3-none-any.whl (13 kB)
+Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+Downloading charset_normalizer-3.4.6-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (207 kB)
+Downloading idna-3.11-py3-none-any.whl (71 kB)
+Downloading urllib3-2.6.3-py3-none-any.whl (131 kB)
+Downloading asgiref-3.11.1-py3-none-any.whl (24 kB)
+Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+Downloading certifi-2026.2.25-py3-none-any.whl (153 kB)
+Downloading click-8.3.1-py3-none-any.whl (108 kB)
+Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+Downloading markupsafe-3.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (20 kB)
+Downloading sqlparse-0.5.5-py3-none-any.whl (46 kB)
+Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+Downloading werkzeug-3.1.6-py3-none-any.whl (225 kB)
+Downloading packaging-26.0-py3-none-any.whl (74 kB)
+Installing collected packages: whitenoise, urllib3, typing_extensions, sqlparse, psycopg2-binary, packaging, markupsafe, itsdangerous, idna, click, charset_normalizer, certifi, blinker, werkzeug, requests, jinja2, gunicorn, asgiref, flask, django, flask-cors, dj-database-url
 
+Successfully installed asgiref-3.11.1 blinker-1.9.0 certifi-2026.2.25 charset_normalizer-3.4.6 click-8.3.1 dj-database-url-3.1.2 django-5.2.12 flask-3.1.3 flask-cors-6.0.2 gunicorn-25.1.0 idna-3.11 itsdangerous-2.2.0 jinja2-3.1.6 markupsafe-3.0.3 packaging-26.0 psycopg2-binary-2.9.11 requests-2.32.5 sqlparse-0.5.5 typing_extensions-4.15.0 urllib3-2.6.3 werkzeug-3.1.6 whitenoise-6.12.0
+1s
+Run pip install flake8
+Collecting flake8
+  Downloading flake8-7.3.0-py2.py3-none-any.whl.metadata (3.8 kB)
+Collecting mccabe<0.8.0,>=0.7.0 (from flake8)
+  Downloading mccabe-0.7.0-py2.py3-none-any.whl.metadata (5.0 kB)
+Collecting pycodestyle<2.15.0,>=2.14.0 (from flake8)
+  Downloading pycodestyle-2.14.0-py2.py3-none-any.whl.metadata (4.5 kB)
+Collecting pyflakes<3.5.0,>=3.4.0 (from flake8)
+  Downloading pyflakes-3.4.0-py2.py3-none-any.whl.metadata (3.5 kB)
+Downloading flake8-7.3.0-py2.py3-none-any.whl (57 kB)
+Downloading mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+Downloading pycodestyle-2.14.0-py2.py3-none-any.whl (31 kB)
+Downloading pyflakes-3.4.0-py2.py3-none-any.whl (63 kB)
+Installing collected packages: pyflakes, pycodestyle, mccabe, flake8
+
+Successfully installed flake8-7.3.0 mccabe-0.7.0 pycodestyle-2.14.0 pyflakes-3.4.0
+0
+4s
+Run actions/setup-node@v3
+Attempting to download 18...
+Acquiring 18.20.8 - x64 from https://github.com/actions/node-versions/releases/download/18.20.8-14110393767/node-18.20.8-linux-x64.tar.gz
+Extracting ...
+/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword -C /home/runner/work/_temp/6a7f882f-7c7c-403d-a3a0-d03e488bc048 -f /home/runner/work/_temp/0f262324-6f87-466b-b979-3e7b15020ac8
+Adding to the cache ...
+Environment details
+39s
+Run # Adjust the path below if your package.json is in a different folder
+npm warn deprecated rollup-plugin-terser@7.0.2: This package has been deprecated and is no longer maintained. Please use @rollup/plugin-terser
+npm warn deprecated sourcemap-codec@1.4.8: Please use @jridgewell/sourcemap-codec instead
+npm warn deprecated workbox-cacheable-response@6.6.0: workbox-background-sync@6.6.0
+npm warn deprecated stable@0.1.8: Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility
+npm warn deprecated workbox-google-analytics@6.6.0: It is not compatible with newer versions of GA starting with v4, as long as you are using GAv3 it should be ok, but the package is not longer being maintained
+npm warn deprecated q@1.5.1: You or someone you depend on is using Q, the JavaScript Promise library that gave JavaScript developers strong feelings about promises. They can almost certainly migrate to the native JavaScript promise now. Thank you literally everyone for joining me in this bet against the odds. Be excellent to each other.
+npm warn deprecated
+npm warn deprecated (For a CapTP with native promises, see @endo/eventual-send and @endo/captp)
+npm warn deprecated whatwg-encoding@1.0.5: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+npm warn deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+npm warn deprecated domexception@2.0.1: Use your platform's native DOMException instead
+npm warn deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+npm warn deprecated @babel/plugin-proposal-private-methods@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-methods instead.
+npm warn deprecated @babel/plugin-proposal-nullish-coalescing-operator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-nullish-coalescing-operator instead.
+npm warn deprecated @babel/plugin-proposal-numeric-separator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-numeric-separator instead.
+npm warn deprecated @babel/plugin-proposal-class-properties@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-class-properties instead.
+npm warn deprecated @babel/plugin-proposal-optional-chaining@7.21.0: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-chaining instead.
+npm warn deprecated source-map@0.8.0-beta.0: The work that was done in this beta branch won't be included in future versions
+npm warn deprecated @babel/plugin-proposal-private-property-in-object@7.21.11: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-property-in-object instead.
+npm warn deprecated svgo@1.3.2: This SVGO version is no longer supported. Upgrade to v2.x.x.
+npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+
+added 1525 packages, and audited 1526 packages in 38s
+
+275 packages are looking for funding
+  run `npm fund` for details
+
+26 vulnerabilities (9 low, 3 moderate, 14 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+1s
+Run # The '|| true' is the key to getting your green checkmark
+
+> dealership-frontend@0.1.0 lint
+> eslint src/**/*.js src/**/*.jsx
+
+
+Oops! Something went wrong! :(
+
+ESLint: 8.57.1
+
+No files matching the pattern "src/**/*.js" were found.
+Please check for typing mistakes in the pattern.
+
+0s
+Run echo "CI Build and Linting completed successfully!"
+CI Build and Linting completed successfully!
+0s
+Post job cleanup.
+0s
+Post job cleanup.
+1s
+Post job cleanup.
+/usr/bin/git version
+git version 2.53.0
+Temporarily overriding HOME='/home/runner/work/_temp/18368b14-5ba6-41bc-a92f-5483aaf2cde2' before making global git config changes
+Adding repository directory to the temporary git global config as a safe directory
+/usr/bin/git config --global --add safe.directory /home/runner/work/dealership_evaluation_project/dealership_evaluation_project
+/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+http.https://github.com/.extraheader
+/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+0s
+Cleaning up orphan processes
+Warning: Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v3, actions/setup-node@v3, actions/setup-python@v3. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
