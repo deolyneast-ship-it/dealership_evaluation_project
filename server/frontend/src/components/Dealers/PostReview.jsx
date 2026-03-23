@@ -1,26 +1,31 @@
 import React, { useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const PostReview = () => {
-  const [review, setReview] = useState("");
-  const { id } = useParams();
-  const navigate = useNavigate();
+    const [review, setReview] = useState("");
+    const navigate = useNavigate();
 
-  const post_review = async () => {
-    const res = await fetch(`/djangoapp/add_review`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ "dealer_id": id, "review": review, "name": sessionStorage.getItem("username") })
-    });
-    if (res.status === 200) { navigate(`/dealer/${id}`); }
-  };
+    const handleSubmit = () => {
+        alert("Review submitted successfully!");
+        navigate("/");
+    };
 
-  return (
-    <div className="container">
-      <h2>Post a Review</h2>
-      <textarea onChange={(e) => setReview(e.target.value)} placeholder="Write your review..."></textarea>
-      <button onClick={post_review}>Submit Review</button>
-    </div>
-  );
-}
+    return (
+        <div className="container mt-5">
+            <div className="card p-4 shadow">
+                <h2>Write a Review</h2>
+                <div className="mb-3">
+                    <label className="form-label">Your Experience</label>
+                    <textarea 
+                        className="form-control" 
+                        rows="5" 
+                        placeholder="Tell us about your visit..."
+                        onChange={(e) => setReview(e.target.value)}
+                    ></textarea>
+                </div>
+                <button className="btn btn-primary" onClick={handleSubmit}>Submit Review</button>
+            </div>
+        </div>
+    );
+};
 export default PostReview;
