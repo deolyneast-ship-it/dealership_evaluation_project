@@ -2,6 +2,10 @@
   "version": 2,
   "builds": [
     {
+      "src": "djangoproj/wsgi.py",
+      "use": "@vercel/python"
+    },
+    {
       "src": "server/frontend/package.json",
       "use": "@vercel/static-build",
       "config": { "distDir": "build" }
@@ -9,13 +13,12 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "server/frontend/$1",
-      "check": true
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "server/frontend/index.html"
+      "dest": "djangoproj/wsgi.py"
     }
   ]
 }
