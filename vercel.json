@@ -17,8 +17,12 @@
       "dest": "/static/$1"
     },
     {
-      "src": "/(.*)",
+      "src": "/djangoapp/(.*)",
       "dest": "djangoproj/wsgi.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "server/frontend/index.html"
     }
   ]
 }
