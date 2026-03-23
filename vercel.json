@@ -1,9 +1,21 @@
 {
   "version": 2,
-  "rewrites": [
+  "builds": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "server/frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "build" }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "server/frontend/$1",
+      "check": true
+    },
+    {
+      "src": "/(.*)",
+      "dest": "server/frontend/index.html"
     }
   ]
 }
