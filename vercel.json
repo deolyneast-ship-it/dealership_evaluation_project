@@ -2,15 +2,19 @@
   "version": 2,
   "builds": [
     {
-      "src": "YOUR_PROJECT_NAME/wsgi.py",
+      "src": "djangoproj/wsgi.py",
       "use": "@vercel/python",
-      "config": { "runtime": "python3.9" }
+      "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
     }
   ],
   "routes": [
     {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
       "src": "/(.*)",
-      "dest": "YOUR_PROJECT_NAME/wsgi.py"
+      "dest": "djangoproj/wsgi.py"
     }
   ]
 }
