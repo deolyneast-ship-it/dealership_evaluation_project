@@ -9,3 +9,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 # If you are serving the React index.html through Django:
 TEMPLATES[0]['DIRS'] = [os.path.join(BASE_DIR, 'server', 'frontend', 'build')]
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
