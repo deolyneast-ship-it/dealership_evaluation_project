@@ -1,4 +1,7 @@
+
+# Use this to prevent crashes if the key is missing
 import os
+GOOGLE_API_KEY = os.environ.get('dealershipevaluationproject', 'AIzaSyBQb-OgC9F4xZgqGcQi43KPzVCi2ZGZC8E')
 
 # Allow Vercel hosts
 ALLOWED_HOSTS = ['.vercel.app', 'now.sh', 'localhost', '127.0.0.1']
