@@ -1,5 +1,35 @@
 import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
 
+const Dealer = () => {
+    const { id } = useParams();
+    const isLoggedIn = sessionStorage.getItem("username");
+
+    return (
+        <div className="container mt-4">
+            <div className="d-flex justify-content-between align-items-center">
+                <h1>Dealer Details</h1>
+                {isLoggedIn && <a href={`/postreview/${id}`} className="btn btn-success">Post Review</a>}
+            </div>
+            <hr />
+            <h3>Customer Reviews</h3>
+            <div className="row">
+                <div className="col-md-6 mb-3">
+                    <div className="card shadow-sm p-3">
+                        <p className="mb-1">"Excellent selection and friendly staff!"</p>
+                        <span className="badge bg-success w-25">Positive</span>
+                    </div>
+                </div>
+                <div className="col-md-6 mb-3">
+                    <div className="card shadow-sm p-3">
+                        <p className="mb-1">"The service was a bit slow today."</p>
+                        <span className="badge bg-warning text-dark w-25">Neutral</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
 const Dealers = () => {
     const allDealers = [
         { id: 1, full_name: "Deolyn's Toyota", city: "Johannesburg", state: "Gauteng", address: "123 Main St" },
