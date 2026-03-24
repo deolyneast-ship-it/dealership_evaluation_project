@@ -1,0 +1,46 @@
+.dashboard-container {
+    padding: 40px;
+    background: transparent;
+    min-height: 100vh;
+}
+
+.cyber-title {
+    color: #E0B0FF; /* Neon Lilac */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid rgba(224, 176, 255, 0.3);
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.dealer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.dealer-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(224, 176, 255, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.dealer-card:hover {
+    border-color: #E0B0FF;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.dealer-card h3 {
+    margin: 0 0 10px 0;
+    color: #E0B0FF;
+}
+
+.dealer-card p {
+    color: #ccc;
+    font-size: 0.9rem;
+}

@@ -1,0 +1,110 @@
+:root {
+  --neon-lilac: #E0B0FF;
+  --deep-purple: #1a0b2e;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+}
+
+body {
+  background: radial-gradient(circle at top right, var(--deep-purple), #000000);
+  color: #ffffff;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+}
+
+/* Page transitions and layout */
+.main-content {
+  padding: 40px 10%;
+}
+
+/* Professional "Glassmorphism" for Dashboards and Forms */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--neon-lilac);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 0 20px rgba(224, 176, 255, 0.15);
+  text-align: center;
+}
+
+.cyber-button {
+  background: var(--neon-lilac);
+  color: black;
+  font-weight: bold;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.cyber-button:hover {
+  box-shadow: 0 0 15px var(--neon-lilac);
+  transform: scale(1.03);
+}
+
+:root {
+   --neon-lilac: #E0B0FF;
+   --deep-purple: #1a0b2e;
+   --glass-bg: rgba(255, 255, 255, 0.05);
+}
+
+/* Global Dashboard Styles */
+.dashboard-container {
+    padding: 40px;
+    min-height: 100vh;
+}
+
+.dealer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.dealer-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid #E0B0FF;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+/* Professional Dealership Dashboard Styles */
+.dashboard-container {
+    padding: 40px;
+    background: #050505; /* Deep black background */
+    min-height: 100vh;
+}
+
+.dealer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.dealer-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid #E0B0FF; /* Cyber-Lavender Border */
+    border-radius: 20px;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dealer-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(224, 176, 255, 0.3);
+}
+
+.dealer-card h3 {
+    color: #E0B0FF;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.dealer-card p {
+    color: #ccc;
+    margin-bottom: 20px;
+}
