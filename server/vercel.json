@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "server/frontend/package.json",
+      "src": "frontend/package.json",
       "use": "@vercel/static-build",
       "config": { "distDir": "build" }
     }
@@ -10,7 +10,10 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "server/frontend/$1"
+      "dest": "frontend/$1"
     }
+  ],
+  "headers": [
+    { "source": "/(.*)", "headers": [{ "key": "x-build-version", "value": "2" }] }
   ]
 }
