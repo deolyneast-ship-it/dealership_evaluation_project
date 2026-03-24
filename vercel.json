@@ -2,27 +2,15 @@
   "version": 2,
   "builds": [
     {
-      "src": "djangoproj/wsgi.py",
-      "use": "@vercel/python"
-    },
-    {
-      "src": "server/frontend/package.json",
+      "src": "package.json",
       "use": "@vercel/static-build",
       "config": { "distDir": "build" }
     }
   ],
   "routes": [
     {
-      "src": "/static/(.*)",
-      "dest": "/static/$1"
-    },
-    {
-      "src": "/djangoapp/(.*)",
-      "dest": "djangoproj/wsgi.py"
-    },
-    {
       "src": "/(.*)",
-      "dest": "server/frontend/index.html"
+      "dest": "/$1"
     }
   ]
 }
