@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; // 1. Add this import
+import './Dealers.css';
 
 const Dealers = () => {
     const navigate = useNavigate(); // 2. Initialize the hook
